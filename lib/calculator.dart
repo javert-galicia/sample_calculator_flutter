@@ -6,9 +6,11 @@ class Calculator extends ChangeNotifier{
   var cnumber='';
   var excess='';
   void zero(){
+    if(current!=''&&cnumber!=''){
     current+='0';
     cnumber+='0';
     notifyListeners();
+    }
   }
   void one(){
     current+='1';
@@ -63,10 +65,29 @@ class Calculator extends ChangeNotifier{
     excess='+';
     notifyListeners();
   }
+  void rest(){
+    var myInt = int.parse(cnumber);
+    if(result==0) {
+      result+=myInt;
+    } else{
+    result-=myInt;
+    }
+    cnumber='';
+    current+='-';
+    excess='-';
+    notifyListeners();
+    
+  }
   void equal(){
     if(excess=='+'){
      var myInt = int.parse(cnumber);
      result+=myInt;
+     cnumber=result.toString();
+     excess='';
+    }
+    if(excess=='-'){
+     var myInt = int.parse(cnumber);
+     result-=myInt;
      cnumber=result.toString();
      excess='';
     }
