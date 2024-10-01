@@ -9,14 +9,14 @@ class Buttons extends StatelessWidget {
   Widget build(BuildContext context) {
     var calculator = context.watch<Calculator>();
     var valor = calculator.current;
-    //var solution = calculator.result;
+    var solution = calculator.result;
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         //const SizedBox(height: 100,),
         Text(valor),
-        //Text(solution.toString()),
+        Text(solution.toString()),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -41,7 +41,7 @@ class Buttons extends StatelessWidget {
             ElevatedButton(onPressed: calculator.one, child: const Text('1')),
             ElevatedButton(onPressed: calculator.two, child: const Text('2')),
             ElevatedButton(onPressed: calculator.three, child: const Text('3')),
-            ElevatedButton(onPressed: () {/**/}, child: const Text('*')),
+            ElevatedButton(onPressed: calculator.multiply, child: const Text('*')),
           ],
         ),
         Row(
