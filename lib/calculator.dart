@@ -6,6 +6,7 @@ class Calculator extends ChangeNotifier{
   var cnumber='';
   var excess='';
   var start=true;
+  var resultd =0.0;
   void zero(){
     if(current!=''&&cnumber!=''){
     current+='0';
@@ -93,6 +94,22 @@ class Calculator extends ChangeNotifier{
     excess='-';
     notifyListeners();
   }
+  void divided(){
+    var myInt = int.parse(cnumber);
+    if(start==true){
+      resultd=myInt/1;
+      result=resultd.toInt();
+      start=false;
+    }
+    else{
+      resultd/=myInt;
+      result=resultd.toInt();
+    }
+    cnumber='';
+    current+='/';
+    excess='/';
+    notifyListeners();
+  }
   void equal(){
     if(excess=='+'){
      var myInt = int.parse(cnumber);
@@ -114,8 +131,17 @@ class Calculator extends ChangeNotifier{
      excess='';
      start=true;
     }
+    if(excess=='/'){
+     var myInt = int.parse(cnumber);
+     resultd/=myInt;
+     result=resultd.toInt();
+     cnumber=result.toString();
+     excess='';
+     start=true;
+    }
     current=result.toString();
     result=0;
+    resultd=0.0;
     notifyListeners();
   }
 }

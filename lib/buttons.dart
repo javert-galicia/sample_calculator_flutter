@@ -50,7 +50,7 @@ class Buttons extends StatelessWidget {
             ElevatedButton(onPressed: () {}, child: const Text('C')),
             ElevatedButton(onPressed: calculator.zero, child: const Text('0')),
             ElevatedButton(onPressed: calculator.equal, child: const Text('=')),
-            ElevatedButton(onPressed: () {/**/}, child: const Text('/')),
+            ElevatedButton(onPressed: calculator.divided, child: const Text('/')),
           ],
         ),
       ],
