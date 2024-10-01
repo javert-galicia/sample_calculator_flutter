@@ -42,9 +42,9 @@ class Buttons extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                const SizedBox(width: 60,),
+                ElevatedButton(onPressed: (){}, child: const Text('C')),
                 ElevatedButton(onPressed: calculator.zero, child: const Text('0')),
-                const SizedBox(width: 50,),
+                ElevatedButton(onPressed: (){}, child: const Text('=')),
                 ElevatedButton(onPressed: (){ /**/ }, child: const Text('/')),
               ],),
             ],
