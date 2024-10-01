@@ -7,6 +7,16 @@ class Calculator extends ChangeNotifier{
   var excess='';
   var start=true;
   var resultd =0.0;
+
+  void clear(){
+    current = '';
+    result=0;
+    cnumber='';
+    excess='';
+    start=true;
+    resultd =0.0;
+    notifyListeners();
+  }
   void zero(){
     if(current!=''&&cnumber!=''){
     current+='0';
