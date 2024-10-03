@@ -19,8 +19,11 @@ class Model extends StatelessWidget {
           child: TextField(
             textAlign: TextAlign.end,
             decoration: InputDecoration(
+              filled: true,
+              fillColor: Colors.blueGrey.shade600,
               border: const OutlineInputBorder(),
               hintText: valor,
+              hintStyle: const TextStyle(color: Colors.white),
             ),
           ),
         ),
