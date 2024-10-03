@@ -14,7 +14,17 @@ class Model extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        Text(valor),
+        SizedBox(
+          width: 280,
+          child: TextField(
+            textAlign: TextAlign.end,
+            decoration: InputDecoration(
+              border: const OutlineInputBorder(),
+              hintText: valor,
+            ),
+          ),
+        ),
+        //Text(valor),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
