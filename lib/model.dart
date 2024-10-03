@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sample_calculator_flutter/view.dart';
-import 'package:sample_calculator_flutter/keys.dart';
+import 'package:sample_calculator_flutter/controller.dart';
 
 class Model extends StatelessWidget {
   const Model({super.key});
