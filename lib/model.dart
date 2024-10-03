@@ -14,20 +14,16 @@ class Model extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        SizedBox(
-          width: 280,
-          child: TextField(
-            textAlign: TextAlign.end,
-            decoration: InputDecoration(
-              filled: true,
-              fillColor: Colors.blueGrey.shade600,
-              border: const OutlineInputBorder(),
-              hintText: valor,
-              hintStyle: const TextStyle(color: Colors.white),
-            ),
-          ),
+        ViewCount(valorCurrent: valor),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            ViewButton(text: '(', mainFunction: calculator.parent1),
+            ViewButton(text: ')', mainFunction: calculator.parent2),
+            ViewButton(text: '.', mainFunction: calculator.point),
+            ViewButton(text: '<-', mainFunction: calculator.remove),
+          ],
         ),
-        //Text(valor),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

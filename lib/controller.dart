@@ -118,7 +118,32 @@ class Keys extends ChangeNotifier {
     current += '/';
     notifyListeners();
   }
-
+  void parent1() {
+    if (current != '0') {
+      current += '(';
+    } else {
+      current = '(';
+    }
+    notifyListeners();
+  }
+  void parent2() {
+   if (current != '0') {
+      current += ')';
+    } else {
+      current = ')';
+    }
+    notifyListeners();
+  }
+  void point() {
+    current += '.';
+    notifyListeners();
+  }
+  void remove() {
+    if (current.isNotEmpty && current.length>1) {
+      current = current.substring(0, current.length - 1);
+    }
+    notifyListeners();
+  }
   void equal() {
     double result = evaluateExpression(current);
     current = '$result';
