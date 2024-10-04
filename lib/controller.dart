@@ -166,8 +166,13 @@ class Keys extends ChangeNotifier {
     notifyListeners();
   }
   void equal() {
+    try{
     double result = evaluateExpression(current);
     current = '$result';
+    }
+    catch(ex){
+      current = "Bad expression. Push Clear.";
+    }
     notifyListeners();
   }
 
