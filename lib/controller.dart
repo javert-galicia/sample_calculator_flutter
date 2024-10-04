@@ -3,9 +3,11 @@ import 'package:math_expressions/math_expressions.dart';
 
 class Keys extends ChangeNotifier {
   var current = '0';
+  bool isSymbol = false;
 
   void clear() {
     current = '0';
+    isSymbol=false;
     notifyListeners();
   }
 
@@ -15,6 +17,7 @@ class Keys extends ChangeNotifier {
     } else {
       current = '0';
     }
+    isSymbol=false;
     notifyListeners();
   }
 
@@ -24,6 +27,7 @@ class Keys extends ChangeNotifier {
     } else {
       current = '1';
     }
+    isSymbol=false;
     notifyListeners();
   }
 
@@ -33,6 +37,7 @@ class Keys extends ChangeNotifier {
     } else {
       current = '2';
     }
+    isSymbol=false;
     notifyListeners();
   }
 
@@ -42,6 +47,7 @@ class Keys extends ChangeNotifier {
     } else {
       current = '3';
     }
+    isSymbol=false;
     notifyListeners();
   }
 
@@ -51,6 +57,7 @@ class Keys extends ChangeNotifier {
     } else {
       current = '4';
     }
+    isSymbol=false;
     notifyListeners();
   }
 
@@ -60,6 +67,7 @@ class Keys extends ChangeNotifier {
     } else {
       current = '5';
     }
+    isSymbol=false;
     notifyListeners();
   }
 
@@ -69,6 +77,7 @@ class Keys extends ChangeNotifier {
     } else {
       current = '6';
     }
+    isSymbol=false;
     notifyListeners();
   }
 
@@ -78,6 +87,7 @@ class Keys extends ChangeNotifier {
     } else {
       current = '7';
     }
+    isSymbol=false;
     notifyListeners();
   }
 
@@ -87,6 +97,7 @@ class Keys extends ChangeNotifier {
     } else {
       current = '8';
     }
+    isSymbol=false;
     notifyListeners();
   }
 
@@ -96,16 +107,23 @@ class Keys extends ChangeNotifier {
     } else {
       current = '9';
     }
+    isSymbol=false;
     notifyListeners();
   }
 
   void plus() {
-    current += '+';
+    if(isSymbol!=true){
+      current += '+';
+      isSymbol=true;
+    }
     notifyListeners();
   }
 
   void multiply() {
-    current += '*';
+    if(isSymbol!=true){
+      current += '*';
+      isSymbol=true;
+    }
     notifyListeners();
   }
 
@@ -115,7 +133,10 @@ class Keys extends ChangeNotifier {
   }
 
   void divided() {
-    current += '/';
+    if(isSymbol!=true){
+      current += '/';
+      isSymbol=true;
+    }
     notifyListeners();
   }
   void parent1() {
