@@ -16,6 +16,7 @@ class MainApp extends StatelessWidget {
       create: (context) => Keys(),
       child: const MaterialApp(
         home: Scaffold(
+          backgroundColor: Color.fromRGBO(94, 116, 167, 1),
           body: Model(),
         ),
       ),

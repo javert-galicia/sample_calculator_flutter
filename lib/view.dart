@@ -11,7 +11,7 @@ class ViewButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: mainFunction,
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.blueGrey.shade600,
+        backgroundColor: const Color.fromRGBO(114, 185, 223, 1),
         foregroundColor: Colors.white,
         minimumSize: const Size.square(70),
       ),
