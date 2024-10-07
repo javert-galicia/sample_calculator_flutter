@@ -10,7 +10,7 @@ class Model extends StatelessWidget {
   Widget build(BuildContext context) {
     var calculator = context.watch<Keys>();
     var valor = calculator.current;
-
+    const AboutDialog(applicationName: 'djfksdjf',);
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -63,6 +63,21 @@ class Model extends StatelessWidget {
             ViewButton(text: '=', mainFunction: calculator.equal),
             ViewButton(text: '/', mainFunction: calculator.divided),
           ],
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Align(alignment: Alignment.bottomRight,
+            child: TextButton(onPressed: (){ 
+                showDialog(context: context, builder: (context) => const AboutDialog(applicationVersion: '1.0' ,applicationName: 'Sample Calculator Flutter',applicationLegalese: 'License GPL-3.0',));
+              },
+              child: const Text('jgalicia.com', style: TextStyle(fontSize: 10,color: Colors.white),),)
+            /* ElevatedButton(
+              onPressed: 
+              child: const Text('about'),
+            ),*/
+            
+            //
+            ),
         ),
       ],
     );
