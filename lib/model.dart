@@ -21,7 +21,11 @@ class Model extends StatelessWidget {
             ViewButton(text: '(', mainFunction: calculator.parent1),
             ViewButton(text: ')', mainFunction: calculator.parent2),
             ViewButton(text: '.', mainFunction: calculator.point),
-            ViewButton(text: '<-', mainFunction: calculator.remove),
+            IconButton(onPressed: calculator.remove, icon: const Icon(Icons.backspace), style: IconButton.styleFrom(
+        backgroundColor: const Color.fromRGBO(114, 185, 223, 1),
+        foregroundColor: Colors.white,
+        minimumSize: const Size.square(65),
+      ),),
           ],
         ),
         Row(

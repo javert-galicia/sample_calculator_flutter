@@ -33,7 +33,7 @@ class ViewCount extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Colors.blueGrey.shade600
+            color: const Color.fromRGBO(114, 185, 223, 1),
           ),
           child: Text(
             valorCurrent,
