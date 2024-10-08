@@ -10,7 +10,9 @@ class Model extends StatelessWidget {
   Widget build(BuildContext context) {
     var calculator = context.watch<Keys>();
     var valor = calculator.current;
-    const AboutDialog(applicationName: 'djfksdjf',);
+    const AboutDialog(
+      applicationName: 'djfksdjf',
+    );
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -21,11 +23,15 @@ class Model extends StatelessWidget {
             ViewButton(text: '(', mainFunction: calculator.parent1),
             ViewButton(text: ')', mainFunction: calculator.parent2),
             ViewButton(text: '.', mainFunction: calculator.point),
-            IconButton(onPressed: calculator.remove, icon: const Icon(Icons.backspace), style: IconButton.styleFrom(
-        backgroundColor: const Color.fromRGBO(114, 185, 223, 1),
-        foregroundColor: Colors.white,
-        minimumSize: const Size.square(65),
-      ),),
+            IconButton(
+              onPressed: calculator.remove,
+              icon: const Icon(Icons.backspace),
+              style: IconButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(114, 185, 223, 1),
+                foregroundColor: Colors.white,
+                minimumSize: const Size.square(65),
+              ),
+            ),
           ],
         ),
         Row(
@@ -66,18 +72,27 @@ class Model extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Align(alignment: Alignment.bottomRight,
-            child: TextButton(onPressed: (){ 
-                showDialog(context: context, builder: (context) => const AboutDialog(applicationVersion: '1.0' ,applicationName: 'Sample Calculator Flutter',applicationLegalese: 'License GPL-3.0',));
-              },
-              child: const Text('jgalicia.com', style: TextStyle(fontSize: 10,color: Colors.white),),)
-            /* ElevatedButton(
-              onPressed: 
-              child: const Text('about'),
-            ),*/
-            
-            //
-            ),
+          child: Align(
+              alignment: Alignment.bottomRight,
+              child: TextButton(
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) => const AboutDialog(
+                            applicationVersion: '1.0',
+                            applicationName: 'Sample Calculator Flutter',
+                            applicationLegalese: 'License GPL-3.0',
+                            children: [
+                              Text(
+                                  'For more information visit http://calculator.jgalicia.com')
+                            ],
+                          ));
+                },
+                child: const Text(
+                  'jgalicia-dev',
+                  style: TextStyle(fontSize: 10, color: Colors.white),
+                ),
+              )),
         ),
       ],
     );
