@@ -1,6 +1,6 @@
 # Sample Calculator with flutter
 
-The calculator is an indispensable tool in the strenuous calculations that we have in daily life. For this reason, this project was created with the simplest and most dynamic conceptualization that the Flutter framework can provide. Simple code, simple installation.
+The calculator is an indispensable tool in the strenuous calculations that we have in daily life. For this reason, this project was created with the simplest and most dynamic conceptualization with just Flutter framework can provide. Simple code, simple installation.
 
 ## Features (v1.0):
 
@@ -13,6 +13,6 @@ The calculator is an indispensable tool in the strenuous calculations that we ha
 * Reverse erase.
 
 
-Contributions and contributions to the project are open.
+Contributions to the project are open.
 
 For more information visit [Sample Calculator Page](https://calculator.jgalicia.com/).
