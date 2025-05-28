@@ -15,4 +15,4 @@ The calculator is an indispensable tool in the strenuous calculations that we ha
 
 Contributions to the project are open.
 
-For more information visit [Sample Calculator Page](https://calculator.jgalicia.com/).
+For more information visit [Sample Calculator Page](https://jgalicia.com/).

@@ -84,12 +84,12 @@ class Model extends StatelessWidget {
                             applicationLegalese: 'License GPL-3.0',
                             children: [
                               Text(
-                                  'For more information visit http://calculator.jgalicia.com')
+                                  'For more information: http://jgalicia.com')
                             ],
                           ));
                 },
                 child: const Text(
-                  'jgalicia-dev',
+                  'javert-galicia',
                   style: TextStyle(fontSize: 10, color: Colors.white),
                 ),
               )),
