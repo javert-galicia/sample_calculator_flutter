@@ -16,6 +16,9 @@ class Model extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
+        const SizedBox(
+        height: 10.0,
+          ),
         ViewCount(valorCurrent: valor),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
