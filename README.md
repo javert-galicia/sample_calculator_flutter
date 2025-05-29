@@ -12,6 +12,14 @@ The calculator is an indispensable tool in the strenuous calculations that we ha
 
 * Reverse erase.
 
+## Screenshots:
+
+![Screenshot of Sample Calculator with Flutter 1](/docs/screenshots/sample-calculator-1.png)
+![Screenshot of Sample Calculator with Flutter 1](/docs/screenshots/sample-calculator-2.png)
+<picture>
+  <source srcset="/docs/screenshots/sample-calculator-1.png" media="(min-width: 400px)">
+</picture>
+
 
 Contributions to the project are open.
 
