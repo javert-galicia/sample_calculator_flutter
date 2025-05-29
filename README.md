@@ -15,7 +15,7 @@ The calculator is an indispensable tool in the strenuous calculations that we ha
 ## Screenshots:
 
 ![Screenshot of Sample Calculator with Flutter 1](/docs/screenshots/sample-calculator-1.png)
-![Screenshot of Sample Calculator with Flutter 1](/docs/screenshots/sample-calculator-2.png)
+![Screenshot of Sample Calculator with Flutter 2](/docs/screenshots/sample-calculator-2.png)
 
 
 Contributions to the project are open.
